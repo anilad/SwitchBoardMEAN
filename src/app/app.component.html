@@ -1,0 +1,10 @@
+<div style="text-align:center">
+  <h1>
+    Switchboard
+  </h1>
+  <div class="row" *ngFor ="let obj of arr, let idx = index">
+    <button class="btn" (click) = "onButtonClick(obj,idx)" [ngStyle]="{'background': obj.color}">{{obj.status}}</button>
+  </div>
+  <p>{{arr | json}}</p>
+  
+</div>
